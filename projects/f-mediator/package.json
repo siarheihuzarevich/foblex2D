@@ -1,0 +1,31 @@
+{
+  "name": "@foblex/2d",
+  "version": "1.1.0",
+  "description": "An Angular library for 2D geometric computations, providing classes and utilities for manipulating points, lines, vectors, rectangles, arcs, and transformations.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "Siarhei Huzarevich",
+  "homepage": "https://flow.foblex.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siarheihuzarevich/f2d.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "angular",
+    "flow",
+    "meditor",
+    "typescript",
+    "foblex"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=12.0.0",
+    "@angular/core": ">=12.0.0",
+    "rxjs": ">=6.6.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
