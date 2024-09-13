@@ -8,10 +8,9 @@
   "homepage": "https://flow.foblex.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siarheihuzarevich/f2d.git"
+    "url": "git+https://github.com/siarheihuzarevich/foblex2D.git"
   },
   "license": "MIT",
-  "private": false,
   "keywords": [
     "angular",
     "flow",
