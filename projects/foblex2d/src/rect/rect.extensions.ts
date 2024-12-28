@@ -104,4 +104,19 @@ export class RectExtensions {
     const position = PointExtensions.sub(rect, PointExtensions.initialize(matrix.left, matrix.top));
     return RectExtensions.initialize(position.x, position.y, rect.width, rect.height);
   }
+
+  public static updateIsNotFinite(rect: IRect): IRect {
+    if (!Number.isFinite(rect.width) || !Number.isFinite(rect.height) || !Number.isFinite(rect.x) || !Number.isFinite(rect.y)) {
+      return RectExtensions.initialize(0, 0, 0, 0);
+    }
+    return rect;
+  }
+
+  public static setToElement(rect: IRect, element: SVGRectElement): void {
+    rect = RectExtensions.updateIsNotFinite(rect);
+    element.setAttribute('x', rect.x.toString());
+    element.setAttribute('y', rect.y.toString());
+    element.setAttribute('width', rect.width.toString());
+    element.setAttribute('height', rect.height.toString());
+  }
 }
