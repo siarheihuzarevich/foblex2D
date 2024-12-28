@@ -111,12 +111,4 @@ export class RectExtensions {
     }
     return rect;
   }
-
-  public static setToElement(rect: IRect, element: SVGRectElement): void {
-    rect = RectExtensions.updateIsNotFinite(rect);
-    element.setAttribute('x', rect.x.toString());
-    element.setAttribute('y', rect.y.toString());
-    element.setAttribute('width', rect.width.toString());
-    element.setAttribute('height', rect.height.toString());
-  }
 }
