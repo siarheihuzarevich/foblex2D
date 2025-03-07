@@ -31,6 +31,19 @@ export class RoundedRect implements IRoundedRect {
     return new RoundedRect(rect.x, rect.y, rect.width, rect.height, rect.radius1, rect.radius2, rect.radius3, rect.radius4);
   }
 
+  public static fromCenter(rect: IRoundedRect, width: number, height: number): RoundedRect {
+    return new RoundedRect(
+      rect.gravityCenter.x - width / 2,
+      rect.gravityCenter.y - height / 2,
+      width,
+      height,
+      rect.radius1,
+      rect.radius2,
+      rect.radius3,
+      rect.radius4
+    );
+  }
+
   public addPoint(point: IPoint): RoundedRect {
     const copy = RoundedRect.fromRoundedRect(this);
     copy.x += point.x;

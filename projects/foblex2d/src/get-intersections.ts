@@ -1,7 +1,7 @@
 import { IPoint, PointExtensions } from './point';
 import { IRoundedRect } from './rounded-rect';
 import { Arc, IArc } from './arc';
-import { Line } from './line';
+import { ILine, Line } from './line';
 import { ShapeParser } from './shape-parser';
 import { VectorExtensions } from './vector';
 
@@ -37,6 +37,31 @@ export class GetIntersections {
       }
     }
 
+    return [];
+  }
+
+  /**
+   * Finds the intersection points between a line segment and an SVG path.
+   * @param path - The SVG path to check for intersections.
+   * @param rect - The rect to check for intersections.
+   * @returns An array of intersection points.
+   */
+
+  public static getRoundedRectIntersectionsWithSVGPath(path: SVGPathElement, rect: IRoundedRect): IPoint[] {
+    const pathLength = path.getTotalLength();
+    const points = [];
+
+    for (let i = 0; i <= pathLength; i += 1) {
+      const point = path.getPointAtLength(i);
+      points.push({ x: point.x, y: point.y });
+    }
+
+    for (let i = 1; i < points.length; i++) {
+      const intersections = this.getRoundedRectIntersections(points[i - 1], points[i], rect);
+      if (intersections.length > 0) {
+        return intersections;
+      }
+    }
     return [];
   }
 

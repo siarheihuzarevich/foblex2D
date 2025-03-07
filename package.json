@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test foblex2d",
     "publish": "ng build foblex2d && cd dist/foblex2d && npm publish"
   },
   "private": true,
