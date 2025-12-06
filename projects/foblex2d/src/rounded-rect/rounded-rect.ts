@@ -44,6 +44,10 @@ export class RoundedRect implements IRoundedRect {
     );
   }
 
+  public static fromPoint(point: IPoint): RoundedRect {
+    return new RoundedRect(point.x, point.y);
+  }
+
   public addPoint(point: IPoint): RoundedRect {
     const copy = RoundedRect.fromRoundedRect(this);
     copy.x += point.x;
