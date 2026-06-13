@@ -3,7 +3,7 @@
   "version": "1.2.2",
   "description": "An Angular library for 2D geometric computations, providing classes and utilities for manipulating points, lines, vectors, rectangles, arcs, and transformations.",
   "main": "index.js",
-  "types": "index.d.ts",
+  "types": "foblex-2d.d.ts",
   "author": "Siarhei Huzarevich",
   "homepage": "https://flow.foblex.com",
   "repository": {
