@@ -1,6 +1,9 @@
 {
   "name": "@foblex/2d",
   "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/siarheihuzarevich/foblex2D/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
